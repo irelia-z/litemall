@@ -12,6 +12,7 @@ const service = axios.create({
 })
 
 // request interceptor
+// 请求拦截器，发送请求前处理
 service.interceptors.request.use(
   config => {
     // Do something before request is sent
@@ -29,6 +30,7 @@ service.interceptors.request.use(
 )
 
 // response interceptor
+// 响应拦截
 service.interceptors.response.use(
   response => {
     const res = response.data
